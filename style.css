@@ -12,6 +12,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    opacity: 0.5;
   }
   .navbar-toggler{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -28,7 +29,13 @@ footer {
     transition: transform 0.3s ease-in-out;
   }
   .content:hover{
-    transform: translateY(-7px);
+    transform: translate(-50%, -50%) scale(1.1);
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 .card {
     width: 80%;
@@ -41,7 +48,9 @@ footer {
 .card:hover {
     transform: translateY(-7px);
 }
-
+.texto{
+  text-align: justify;
+}
 .navbar{
     background-color: black !important;
    
@@ -51,22 +60,22 @@ footer {
     font-weight:lighter;
     transition: transform 0.3s ease-in-out;
   }
-  .nav-link:hover{
+.nav-link:hover{
     transform: translateY(-7px);
   }
 
-  .navbar a.active {
+.navbar a.active {
     background-color: #333;
     color: #fff;
     
   }
 
-  .my-col {
+.my-col {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
   }
-  .my-col:hover{
+.my-col:hover{
     transform: translate(-50%, -50%) scale(1.1);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     cursor: pointer;
@@ -79,6 +88,6 @@ footer {
     height: 80px;
     transition: transform 0.3s ease-in-out;
  }
- .logo:hover {
+.logo:hover {
     transform: scale(1.2);
   }
