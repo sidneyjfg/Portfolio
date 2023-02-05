@@ -4,15 +4,6 @@ body {
   flex-direction: column;
 }
 
-.custom-scrollbar {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 10px;
-  background-color: #ddd;
-}
-
 
 .banner img {
   width: 100%;
@@ -109,16 +100,13 @@ footer {
 
 .my-col {
     background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
   }
 .my-col:hover{
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translateY(-7px);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 50%;
   }
 .logo{
     width:auto;
