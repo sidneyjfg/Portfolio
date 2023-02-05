@@ -8,6 +8,10 @@ footer {
     padding: 10px 0;
   }
   
+  .navbar-toggler {
+    background-color: #fff;
+  }
+
 .card {
     width: 80%;
     height: 100%;
