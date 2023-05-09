@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>About me</title>
-    <!-- Add the Bootstrap CSS file -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../sidneyjunio/style.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="../sidneyjunio/index.html"><img class = "logo" src="../sidneyjunio/img/sjpreto.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../sidneyjunio/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="../sidneyjunio/about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../sidneyjunio/projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../sidneyjunio/curriculum.html">Curriculum</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main class="container my-5">
-        <section id="about">
-          <h1 class="text-center">About Me</h1>
-          <div class="row">
-            <div class="d-flex align-items-center">
-              <div class="col-md-6">
-                <img src="../sidneyjunio/img/sjbranco.png" alt="Company Logo" class="card">
-              </div>
-              <!-- Aqui em baixo está do lado da logo -->
-              <div class="col-md-6 my-col">
-                <p class="text-justify">Olá, meu nome é Sidney como podem ver, sou Estudante de Sistemas de Informação.
-                  Sou uma pessoa apaixonada por Tecnologia, e dedico boa parte do meu tempo livre a essa atividade.
-                   
-                  Além disso, sou uma pessoa proativa e sempre busco novos desafios e oportunidades para crescer profissionalmente.
-                  
-                  Na minha carreira, ainda não tive a oportunidade de trabalhar em projetos inovadores, 
-                  o que torna esse uma ambição por minha parte no momento. Tenho vontade de futuramente poder viajar e trabalhar se necessário
-                  e ao conquistar minha casa própria automatizá-la com inteligência artificial.
-                  
-                  Fora do trabalho, sou uma pessoa muito social e gosto de passar tempo com amigos e familiares.
-                  Também sou apaixonado por viajar e conhecer novos lugares e culturas, o que me permite ampliar
-                  meus horizontes e enriquecer minha vida pessoal e cultural.
-                  
-                  Em resumo, sou uma pessoa dedicada, proativa e sempre em busca de novos desafios e oportunidades. 
-                  Estou sempre aberto a novos projetos e oportunidades de crescimento profissional e pessoal. </p>
-              </div>
-            </div>
+
+<head>
+  <title>About me</title>
+  <!-- Add the Bootstrap CSS file -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../sidneyjunio/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../sidneyjunio/index.html"><img class="logo"
+          src="../sidneyjunio/img/sjpreto.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../sidneyjunio/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="../sidneyjunio/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sidneyjunio/projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sidneyjunio/curriculum.html">Curriculum</a>
+            <ul>
+              <li><a class="nav-link" href="../sidneyjunio/recommendation.html">Recommendation</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section id="about">
+      <h1 class="text-center">About Me</h1>
+      <div class="row">
+        <div class="d-flex align-items-center">
+          <div class="col-md-6">
+            <img src="../sidneyjunio/img/sjbranco.png" alt="Company Logo" class="card">
           </div>
-        </section>
-      </main>
-      <footer class="bg-light text-center py-3 copy">
-        <p>Copyright ©2022 Sidney's portfolio</p>
-      </footer>
-      <!-- Add the Bootstrap JavaScript files -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    </body>
-  </html>
-  
+          <!-- Aqui em baixo está do lado da logo -->
+          <div class="col-md-6 my-col">
+            <p class="text-justify">Olá, meu nome é Sidney como podem ver, sou Estudante de Sistemas de Informação.
+              Sou uma pessoa apaixonada por Tecnologia, e dedico boa parte do meu tempo livre a essa atividade.
+
+              Além disso, sou uma pessoa proativa e sempre busco novos desafios e oportunidades para crescer
+              profissionalmente.
+
+              Na minha carreira, ainda não tive a oportunidade de trabalhar em projetos inovadores,
+              o que torna esse uma ambição por minha parte no momento. Tenho vontade de futuramente poder viajar e
+              trabalhar se necessário
+              e ao conquistar minha casa própria automatizá-la com inteligência artificial.
+
+              Fora do trabalho, sou uma pessoa muito social e gosto de passar tempo com amigos e familiares.
+              Também sou apaixonado por viajar e conhecer novos lugares e culturas, o que me permite ampliar
+              meus horizontes e enriquecer minha vida pessoal e cultural.
+
+              Em resumo, sou uma pessoa dedicada, proativa e sempre em busca de novos desafios e oportunidades.
+              Estou sempre aberto a novos projetos e oportunidades de crescimento profissional e pessoal. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-light text-center py-3 copy">
+    <p>Copyright ©2022 Sidney's portfolio</p>
+  </footer>
+  <!-- Add the Bootstrap JavaScript files -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
