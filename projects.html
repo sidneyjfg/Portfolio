@@ -30,16 +30,20 @@
     </header>
     <main class="container my-5">
       <section id="projects">
+        <div id="modal-container"> </div>
         <h1 class="text-center">Projects</h1>
         <div class="row">
           <!-- primeira coluna -->
           <div class="col-md-4">
             <div class="card">
-              <img src="project1.jpg" class="card-img-top" alt="Project 1">
+              <img src="../sidneyjunio/img/cardFlutter.png" class="card-img-top" alt="Project 1">
               <div class="card-body">
-                <h5 class="card-title">Project 1</h5>
-                <p class="card-text">uma descrição breve do projeto 1.</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+                <h5 class="card-title">App Mobile Flutter/Dart</h5>
+                <p class="card-text">Este projeto  trata-se de uma aplicação desenvolvida em linguagem Dart que aborda funcionalidades de autenticação 
+                  como conectar usuário, alteração de senha por parte do usuário caso ele queira e esquecimento de senha que o leva ao email.<br>
+                  <strong>Tecnologias utilizadas: </strong>Flutter, Dart, Firebase (banco) e design UI/UX.
+                </p>
+                <a href="#" class="btn btn-primary" id="learn-more-btn">Learn More</a>
               </div>
             </div>
           </div>
@@ -70,7 +74,7 @@
             </div>
           </div>
         </div>
-        
+        <!--//C:\Users\sidney\Documents\GitHub-->
       </section>
     </main>
     <footer class="bg-light text-center py-3 copy">
@@ -80,6 +84,45 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+      // Seleciona o botão "Learn More"
+      const learnMoreBtn = document.querySelector('#learn-more-btn');
+    
+      // Adiciona um event listener para escutar o evento de clique no botão
+      learnMoreBtn.addEventListener('click', function() {
+        // Cria o conteúdo da modal
+        const modalContent = `
+          <div class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal Title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="../sidneyjunio/img/cardProject1.png" class="card-img-top" alt="Project 1">
+                  <h3> Código postado no Git abaixo
+                  <a href="https://github.com/sidneyjfg/FlutterApp"><br>Abrir git</a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+    
+        // Adiciona o conteúdo da modal ao elemento com o ID "modal-container"
+        document.querySelector('#modal-container').innerHTML = modalContent;
+    
+        // Inicializa a modal
+        const modal = new bootstrap.Modal(document.querySelector('.modal'));
+        modal.show();
+      });
+    </script>
+    
   </body>
 </html>
 
