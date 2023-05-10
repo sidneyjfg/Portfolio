@@ -57,7 +57,8 @@
                 que o leva ao email.<br>
                 <strong>Tecnologias utilizadas: </strong>Flutter, Dart, Firebase (banco) e design UI/UX.
               </p>
-              <a href="#" class="btn btn-primary" id="learn-more-btn">Learn More</a>
+              <a href="#" class="btn btn-primary" id="learn-more-btn"
+                data-link="https://github.com/sidneyjfg/FlutterApp">Learn More</a>
             </div>
           </div>
         </div>
@@ -66,18 +67,21 @@
 
         <div class="col-md-4">
           <div class="card">
-            <img src="project1.jpg" class="card-img-top" alt="Project 1">
+            <img src="../sidneyjunio/img/projetoSite.png" class="card-img-top" alt="Project 2">
             <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text">A brief description of Project 1 goes here.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <h5 class="card-title">Web Design</h5>
+              <p class="card-text">Aqui temos um link no qual verá um site de serviços solicitado pelo cliente
+                no qual abordei um design mais moderno para o cliente com tais redirecionamentos de orçamento para o whatsapp e formas de 
+                contato por email.</p>
+              <a href="#" class="btn btn-primary" id="learn-more-btn2" data-link="https://engasbrasil.com.br">Learn
+                More</a>
             </div>
           </div>
         </div>
 
         <!-- terceira coluna  -->
 
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="card">
             <img src="project1.jpg" class="card-img-top" alt="Project 1">
             <div class="card-body">
@@ -87,8 +91,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <!--//C:\Users\sidney\Documents\GitHub-->
+      </div> -->
+        <!--//C:\Users\sidney\Documents\GitHub-->
     </section>
   </main>
   <footer class="bg-light text-center py-3 copy">
@@ -107,31 +111,36 @@
   <script>
     // Seleciona o botão "Learn More"
     const learnMoreBtn = document.querySelector('#learn-more-btn');
+    const learnMoreBtn2 = document.querySelector('#learn-more-btn2');
+    //const learnMoreBtn3 = document.querySelector('#learn-more-btn');
+
+
 
     // Adiciona um event listener para escutar o evento de clique no botão
     learnMoreBtn.addEventListener('click', function () {
       // Cria o conteúdo da modal
+
       const modalContent = `
-          <div class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal Title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <img src="../sidneyjunio/img/cardModalFlutter.png" class="card-img-top" alt="Project 1">
-                  <a href="https://github.com/sidneyjfg/FlutterApp"><br>Abrir projeto</a>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Mobile App Dart/Flutter</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="../sidneyjunio/img/cardModalFlutter.png" class="card-img-top" alt="Project 1">
+                    <a href="https://github.com/sidneyjfg/FlutterApp"><br>Abrir projeto</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        `;
+          `;
 
       // Adiciona o conteúdo da modal ao elemento com o ID "modal-container"
       document.querySelector('#modal-container').innerHTML = modalContent;
@@ -140,7 +149,47 @@
       const modal = new bootstrap.Modal(document.querySelector('.modal'));
       modal.show();
     });
+
+    //------------------------------- MODAL 2 -------------------------------------------------
+
+    // Adiciona um event listener para escutar o evento de clique no botão
+    learnMoreBtn2.addEventListener('click', function () {
+      // Cria o conteúdo da modal
+
+      const modalContent = `
+            <div class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Site de Serviço</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="../sidneyjunio/img/modalProjectWeb.png" class="card-img-top" alt="Project 2">
+                    <a href="https://engasbrasil.com.br"><br>Abrir site</a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+
+      // Adiciona o conteúdo da modal ao elemento com o ID "modal-container"
+      document.querySelector('#modal-container').innerHTML = modalContent;
+
+      // Inicializa a modal
+      const modal = new bootstrap.Modal(document.querySelector('.modal'));
+      modal.show();
+    });
+//------------------------------- MODAL 3 -------------------------------------------------
+
+
   </script>
-  
+
 </body>
+
 </html>

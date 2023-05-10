@@ -194,3 +194,11 @@ nav ul ul li a.active {
   display: block;
   margin: 0 auto;
 }
+
+.modal-dialog {
+  max-width: 1250px; /* aumenta em 50% */
+}
+
+.modal-content {
+  width: 100%; /* faz o conteúdo ocupar todo o espaço possível */
+}
