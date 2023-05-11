@@ -202,3 +202,8 @@ nav ul ul li a.active {
 .modal-content {
   width: 100%; /* faz o conteúdo ocupar todo o espaço possível */
 }
+h5, span {
+  display: inline-block;
+  vertical-align: top;
+  
+  }
