@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>About me</title>
+  <title>Portfólio</title>
   <!-- Add the Bootstrap CSS file -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -38,7 +38,10 @@
       <a href="#about" class="btn-more">More About Me</a>
     </div>
   </section>
+  <div class="separator"></div>
   <!-- ----------------------------- Down Below -> about -------------------------- -->
+
+
   <section id="about">
     <div class="about-content">
       <div class="row">
@@ -46,8 +49,9 @@
           <img id="profileAbout" src="../sidneyjunio/img/profileAbout.jpeg" alt="Me">
         </div>
         <div class="about-col-2">
-          <h1 class="sub-title"> About me</h1>
-          <p align="justify">Olá, meu nome é Sidney como podem ver, sou Estudante de Sistemas de Informação na Puc Minas.
+          <h1 class="heading"> About <span>Me</span></h1>
+          <p align="justify">Olá, meu nome é Sidney como podem ver, sou Estudante de Sistemas de Informação na Puc
+            Minas.
             Sou uma pessoa apaixonada por Tecnologia, e dedico boa parte do meu tempo livre a essa atividade.
 
             Além disso, sou uma pessoa proativa e sempre busco novos desafios e oportunidades para crescer
@@ -101,62 +105,87 @@
   </section>
 
   <!-- ----------------------------- Down Below -> Projects -------------------------- -->
-  <section id="projects">
-    <div class="project">
-      <img src="tablet.jpg" alt="Projeto Tablet">
-      <h2>Projeto Tablet</h2>
-      <p>Descrição do projeto tablet.</p>
-    </div>
-
-    <div class="project">
-      <img src="cellphone.jpg" alt="Projeto Celular">
-      <h2>Projeto Celular</h2>
-      <p>Descrição do projeto celular.</p>
-    </div>
-
-
-    </main>
-    <footer class="bg-light text-center py-3 copy">
-      <p>Copyright ©2022 Sidney's portfolio</p>
-    </footer>
+  <section class="services" id="service">
+    <h2 class="heading"> My<span> Services</span></h2>
     
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
+    <div class="services-content">
+      <div class="services-box">
+        <i class='bx bx-code-alt'></i>
+        <h3> FrontEnd Developer</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur placeat dolore asperiores accusantium soluta
+          explicabo dicta iusto itaque et! Voluptates in odio voluptatibus necessitatibus sit autem est soluta ducimus
+          itaque.
+        </p>
+        <a href="#" class="btn-more">Read More</a>
+      </div>
+      
+      <div class="services-box">
+        <i class='bx bx-code-alt'></i>
+        <h3> BackEnd Developer</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur placeat dolore asperiores accusantium soluta
+          explicabo dicta iusto itaque et! Voluptates in odio voluptatibus necessitatibus sit autem est soluta ducimus
+          itaque.
+        </p>
+        <a href="#" class="btn-more">Read More</a>
+      </div>
 
-      function opentab(tabname){
-        for(tablink of tablinks){
-          tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+      <div class="services-box">
+        <i class='bx bx-code-alt'></i>
+        <h3> Web Developer</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur placeat dolore asperiores accusantium soluta
+          explicabo dicta iusto itaque et! Voluptates in odio voluptatibus necessitatibus sit autem est soluta ducimus
+          itaque.
+        </p>
+        <a href="#" class="btn-more">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <footer class="text-center py-3 copy">
+    <p>Copyright ©2022 Sidney's portfolio</p>
+  </footer>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
       }
-    </script>
-    <!-- Setup and start animation! -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-      var typed = new Typed('#element', {
-        strings: ['BackEnd Developer', 'FrontEnd Developer', 'Web Developer'],
-        typeSpeed: 50,
-        loop: true
-      });
-    </script>
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <!-- Setup and start animation! -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['BackEnd Developer', 'FrontEnd Developer', 'Web Developer'],
+      typeSpeed: 50,
+      loop: true
+    });
+  </script>
 
-    <!-- Add the Bootstrap JavaScript files -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"></script>
+  <!-- Add the Bootstrap JavaScript files -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 
-    <script src="../sidneyjunio/script.js"></script>
+  <script src="../sidneyjunio/script.js"></script>
 
 </body>
 

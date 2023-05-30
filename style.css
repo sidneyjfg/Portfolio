@@ -5,13 +5,23 @@
   font-family: 'poppins', sans-serif;
 }
 
-html{
+.separator {
+  border-top: 1px solid #e3e3e357;
+  margin: 3px;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
+  background: #142B39;
   color: #fff;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -36,7 +46,12 @@ body {
 }
 
 .navbar a:hover {
-  color: rgb(133, 160, 242,95);
+  color: rgb(133, 160, 242, 95);
+}
+
+.heading span{
+  align-items: center;
+  color: rgb(133, 160, 242, 95);
 }
 
 .Home {
@@ -61,12 +76,13 @@ body {
   font-weight: 700;
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2) {
   margin-bottom: 30px;
-  
+
 }
-.home-content h3 span{
-  color: rgb(133, 160, 242,95);
+
+.home-content h3 span {
+  color: rgb(133, 160, 242, 95);
 }
 
 .home-content h1 {
@@ -87,24 +103,24 @@ body {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid rgb(133, 160, 242,95);
+  border: 2px solid rgb(133, 160, 242, 95);
   border-radius: 50%;
   font-size: 20px;
-  color: rgb(133, 160, 242,95);
+  color: rgb(133, 160, 242, 95);
   text-decoration: none;
   margin: 30px 15px 30px 0;
 }
 
 .home-sci a:hover {
-  background-color: rgb(133, 160, 242,95);
+  background-color: rgb(133, 160, 242, 95);
   color: #000;
-  box-shadow: 0 0 20px rgb(133, 160, 242,95);
+  box-shadow: 0 0 20px rgb(133, 160, 242, 95);
 }
 
 .btn-more {
   display: inline-block;
   padding: 12px 28px;
-  background: rgb(133, 160, 242,95);
+  background: rgb(133, 160, 242, 95);
   border-radius: 40px;
   font-size: 16px;
   color: #000;
@@ -114,79 +130,86 @@ body {
 }
 
 .btn-more:hover {
-  box-shadow: 0 0 5px rgb(133, 160, 242,95), 
-  0 0 25px rgb(133, 160, 242,95), 0 0 50px rgb(133, 160, 242,95),
-  0 0 100px rgb(133, 160, 242,95), 0 0 200px rgb(133, 160, 242,95)
+  box-shadow: 0 0 5px rgb(133, 160, 242, 95),
+    0 0 25px rgb(133, 160, 242, 95), 0 0 50px rgb(133, 160, 242, 95),
+    0 0 100px rgb(133, 160, 242, 95), 0 0 200px rgb(133, 160, 242, 95)
 }
 
-#about{
-  background: linear-gradient(40deg,#060D13,#142B39);
+#about {
+  background: linear-gradient(40deg, #060D13, #142B39);
   padding: 80px;
   color: #e3e3e3;
 }
-.sub-title{
-  font-size: 60px;
-  font-weight: 600;
-}
-.row{
+
+
+
+.row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.about-col-1{
+
+.about-col-1 {
   flex-basis: 35%;
 }
-.about-col-1 img{
-width: 100%;
-border-radius: 15px;
-}
-.about-col-2{
-flex-basis: 60%;
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
 }
 
-.tab-titles{
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+.tab-titles {
   display: flex;
   margin: 20px 0 40px;
 }
 
-.tab-links{
+.tab-links {
   margin-right: 50px;
   font-size: 18px;
   font-weight: 800;
   cursor: pointer;
   position: relative;
 }
-.tab-links::after{
+
+.tab-links::after {
   content: '';
   width: 0;
   height: 3px;
-  background: rgb(133, 160, 242,95);
+  background: rgb(133, 160, 242, 95);
   position: absolute;
   left: 0;
   bottom: -8px;
   transition: 0.5s;
 }
 
-.tab-links.active-link::after{
-  width: 50%; 
+.tab-links.active-link::after {
+  width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
   list-style: none;
   margin: 10px 0;
 }
-.tab-contents ul li span{
-  color: rgb(133, 160, 242,95);
+
+.tab-contents ul li span {
+  color: rgb(133, 160, 242, 95);
   font-size: 14px;
   font-weight: bold;
 }
 
-.tab-contents{
+.tab-contents {
   display: none;
 }
-.tab-contents.active-tab{
+
+.tab-contents.active-tab {
   display: block;
 
 }
+
 #logo {
   width: 100px;
   height: 100px;
@@ -195,4 +218,29 @@ flex-basis: 60%;
 
 #logo:hover {
   transform: scale(1.2);
+}
+
+.services h2{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.services-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.services-content .services-box{
+  flex: 1 1 30rem;
+  background-color: #143d57;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .1rem solid #00000057;
+}
+
+.heading {
+  font-size: 4.5rem;
 }
