@@ -7,99 +7,156 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../sidneyjunio/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="../sidneyjunio/index.html"><img class="logo"
-          src="../sidneyjunio/img/sjpreto.png"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="../sidneyjunio/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../sidneyjunio/about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../sidneyjunio/projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../sidneyjunio/curriculum.html">Curriculum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../sidneyjunio/recommendation.html">Recommendation</a>
-          </li>
-        </ul>
-      </div>
+  <header class="header">
+    <a href="#"><img id="logo" src="../sidneyjunio/img/sjTransparent.png"></a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills </a>
+      <a href="#projects">Projects</a>
     </nav>
   </header>
+  <section class="Home" id="home">
+    <div class="home-content">
+      <h3>Hello, It's me</h3>
+      <h1>Sidney Junio</h1>
+      <h3>And I'm a <span id="element"></span></h3>
+      <p>I'm a web Designer with extensive experience for over 3 years.
+        <br>expertise is to create and website design, Frontend design, and Developer BackEnd
+      </p>
+      <div class="home-sci">
+        <a href="https://www.instagram.com/sidneyjfg/"><i class='bx bxl-instagram'></i></a>
+        <a href="https://wa.link/sjpipp"><i class='bx bxl-whatsapp'></i></a>
+        <a href="https://github.com/sidneyjfg"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/sidneyjunio/"><i class='bx bxl-linkedin'></i></a>
+      </div>
+      <a href="#about" class="btn-more">More About Me</a>
+    </div>
+  </section>
+  <!-- ----------------------------- Down Below -> about -------------------------- -->
+  <section id="about">
+    <div class="about-content">
+      <div class="row">
+        <div class="about-col-1">
+          <img id="profileAbout" src="../sidneyjunio/img/profileAbout.jpeg" alt="Me">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title"> About me</h1>
+          <p align="justify">Olá, meu nome é Sidney como podem ver, sou Estudante de Sistemas de Informação na Puc Minas.
+            Sou uma pessoa apaixonada por Tecnologia, e dedico boa parte do meu tempo livre a essa atividade.
 
+            Além disso, sou uma pessoa proativa e sempre busco novos desafios e oportunidades para crescer
+            profissionalmente.
 
-  <section id="banner">
-    <div class="container-fluid">
-      <div class="banner">
-        <img src="../sidneyjunio/img/banner.png" alt="Banner atractive">
+            Na minha carreira, ainda não tive a oportunidade de trabalhar em projetos inovadores,
+            o que torna esse uma ambição por minha parte no momento. Tenho vontade de futuramente poder viajar e
+            trabalhar se necessário
+            e ao conquistar minha casa própria automatizá-la com inteligência artificial.
+
+            Fora do trabalho, sou uma pessoa muito social e gosto de passar tempo com amigos e familiares.
+            Também sou apaixonado por viajar e conhecer novos lugares e culturas, o que me permite ampliar
+            meus horizontes e enriquecer minha vida pessoal e cultural.
+
+            Em resumo, sou uma pessoa dedicada, proativa e sempre em busca de novos desafios e oportunidades.
+            Estou sempre aberto a novos projetos e oportunidades de crescimento profissional e pessoal.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>App Development</span><br>Building Android/iOS apps using Dart language</li>
+              <li><span>Web Development</span><br>Designing Web/App interfaces using CSS, HTML, Wordpress</li>
+              <li><span>Operational System</span><br>Development using Linux/Windows</li>
+              <li><span>Databases</span><br>Implement database in applications like MySQL</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>May 2023 - Current</span><br>Customer Support using Linux as Operating System</li>
+              <li><span>April 2023</span><br>Designing Web/App interfaces using CSS, HTML, Wordpress</li>
+              <li><span>May 2022 - April 2023</span><br>Performed functions such as generating notes, entering transfer
+                and return notes and customer service</li>
+              <li><span>June 2021</span><br>Development Websites E-commerce</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2022 - 2026</span><br>System of Information - Puc Minas</li>
+              <li><span>2018 - 2019</span><br>Computer Technician - SENAI</li>
+              <li><span>2015 - 2016</span><br>English Language - FISK</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <main class="container">
-    <section id="about">
-      <h1 class="text-center">About Me</h1>
-      <p>Meu nome é Sidney Junio, tenho 20 anos, e atualmente atuo como desenvolvedor, tanto de sites quanto por lazer, de jogos. Possuo conhecimentos em muitas linguagens
-        principalmente c# e as voltada para web como HTML, CSS.</p>
-    </section>
-    <section id="projects">
-      <h1 class="text-center">My Projects</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="../sidneyjunio/img/cardIndexFlutter.png" class="card-img-top" alt="Aplicativo Mobile Dart">
-            <div class="card-body">
-              <h5 class="card-title">App Mobile</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="..//sidneyjunio/img/projetoSite.png" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Web Design</h5>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-md-4">
-          <div class="card">
-            <img src="project3.jpg" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text">A brief description of Project 3 goes here.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </section>
-  </main>
-  <footer class="bg-light text-center py-3 copy">
-    <p>Copyright ©2022 Sidney's portfolio</p>
-  </footer>
-  <!-- Add the Bootstrap JavaScript files -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
-  <script src="../sidneyjunio/script.js"></script>
+
+  <!-- ----------------------------- Down Below -> Projects -------------------------- -->
+  <section id="projects">
+    <div class="project">
+      <img src="tablet.jpg" alt="Projeto Tablet">
+      <h2>Projeto Tablet</h2>
+      <p>Descrição do projeto tablet.</p>
+    </div>
+
+    <div class="project">
+      <img src="cellphone.jpg" alt="Projeto Celular">
+      <h2>Projeto Celular</h2>
+      <p>Descrição do projeto celular.</p>
+    </div>
+
+
+    </main>
+    <footer class="bg-light text-center py-3 copy">
+      <p>Copyright ©2022 Sidney's portfolio</p>
+    </footer>
+    
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <!-- Setup and start animation! -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+        strings: ['BackEnd Developer', 'FrontEnd Developer', 'Web Developer'],
+        typeSpeed: 50,
+        loop: true
+      });
+    </script>
+
+    <!-- Add the Bootstrap JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+
+    <script src="../sidneyjunio/script.js"></script>
 
 </body>
 
