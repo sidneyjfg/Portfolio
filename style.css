@@ -5,13 +5,6 @@
   font-family: 'poppins', sans-serif;
 }
 
-.separator {
-  border-top: 1px solid #e3e3e357;
-  margin: 3px;
-  display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
-}
 
 html {
   scroll-behavior: smooth;
@@ -34,7 +27,9 @@ body {
   align-items: center;
   z-index: 100;
 }
-
+.copy{
+  
+}
 .navbar a {
   display: inline-block;
   font-size: 25px;
@@ -154,12 +149,16 @@ body {
 }
 
 .about-col-1 {
-  flex-basis: 35%;
+  flex-basis: 35%; 
 }
 
 .about-col-1 img {
   width: 100%;
+  margin-top: 15%;
   border-radius: 15px;
+  box-shadow: 0 0 5px rgb(133, 160, 242, 95),
+    0 0 25px rgb(133, 160, 242, 95), 0 0 50px rgb(133, 160, 242, 95),
+    0 0 100px rgb(133, 160, 242, 95), 0 0 200px rgb(133, 160, 242, 95)
 }
 
 .about-col-2 {
@@ -224,12 +223,12 @@ body {
   transform: scale(1.2);
 }
 #service{
-  background: linear-gradient(40deg,#142B39,#060D13);
+  background: linear-gradient(-40deg,#142B39,#060D13);
 }
 
 .services h2 {
   text-align: center;
-  margin-bottom: 10rem;
+  
 }
 
 .services-content {
@@ -239,7 +238,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 20px 30px;
+  margin: 0px 30px;
+  
 }
 
 .services-content .services-box {
@@ -273,7 +273,7 @@ body {
 
 .services-box p{
   font-size: 1.3rem;
-  margin: 1rem 0 3rem;
+  margin: 1rem 0 2rem;
 }
 
 .projects{
@@ -281,7 +281,7 @@ body {
 }
 
 .projects h2{
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .projects-content{
@@ -290,6 +290,7 @@ body {
   align-items: center;
   gap: 3rem ;
   margin: 30px;
+  
 }
 .projects-box img{
   width: 100%;
