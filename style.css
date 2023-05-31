@@ -118,7 +118,7 @@ body {
 }
 
 .btn-more {
-  display: inline-block;
+  display: inline-flex;
   padding: 12px 28px;
   background: rgb(133, 160, 242, 95);
   border-radius: 40px;
@@ -127,6 +127,9 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
+}
+.btn-more i{
+  font-size: 1.5rem;
 }
 
 .btn-more:hover {
@@ -233,6 +236,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  margin: 30px;
 }
 
 .services-content .services-box {
@@ -282,6 +286,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 3rem ;
+  margin: 30px;
 }
 .projects-box img{
   width: 100%;
@@ -294,7 +299,6 @@ body {
 
 .projects-content .projects-box{
   position: relative;
-  
   width: 500px;
   height: 500px;
   border-radius: 2rem;
@@ -345,3 +349,4 @@ margin: .3rem 0 1rem;
 font-size: 2rem;
 color: #142B39;
 }
+
