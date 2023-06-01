@@ -28,7 +28,8 @@ body {
   z-index: 100;
 }
 .copy{
-  
+bottom: 0;
+align-items: center;
 }
 .navbar a {
   display: inline-block;
@@ -292,6 +293,10 @@ body {
   margin: 30px;
   
 }
+.projects-box{
+  margin-bottom: 1rem;
+}
+
 .projects-box img{
   width: 100%;
   transition: .5s ease;
