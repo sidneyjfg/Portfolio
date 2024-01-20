@@ -159,6 +159,21 @@
           <a href="https://engasbrasil.com.br" target="_blank"><i class='bx bx-link-external'></i></i></a>
         </div>
       </div>
+      <div class="projects-box">
+        <div class="cep">
+          <div class="cep-cover" id="cepOverlay">
+            <button onclick="toggleCepBox(true)" onclick="mostrarConsultaCep()">Visualizar</button>
+          </div>
+
+          <h4>Consulta de CEP</h4>
+          <p>Digite um CEP para ver sua localização e informações:</p>
+          <input type="text" id="cepInput" placeholder="Digite um CEP">
+          <button onclick="buscarCep()">Buscar</button>
+          <div id="resultadoCep"></div>
+          <button onclick="toggleCepBox(false)" id="closeButton" style="display:none;">Sair</button>
+        </div>
+      </div>
+
     </div>
 
 
@@ -169,7 +184,7 @@
   <!-- ---------------------------- Footer --------------------------------- -->
 
   <footer class="text-center py-3 copy">
-    <p>Copyright ©2022 Sidney's portfolio</p>
+    <p>Copyright ©2024 Sidney's portfolio</p>
   </footer>
 
   <!-- ---------------------------- Scripts --------------------------------- -->
@@ -209,8 +224,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-
-  <script src="../Portfolio/script.js"></script>
+  <script src="../Portfolio/ApiCep.js"></script>
 
 </body>
 
