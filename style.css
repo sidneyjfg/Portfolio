@@ -303,7 +303,6 @@ body {
   align-items: center;
   gap: 3rem;
   margin: 30px;
-
 }
 
 .projects-box {
@@ -466,4 +465,11 @@ button:hover {
   margin-top: 10px;
   margin-bottom: 15px;
   /* Espaçamento no topo */
+}
+
+
+.projects-box .imagepy{
+  position: relative;
+  background-size:contain;
+  height: 100vh;
 }
