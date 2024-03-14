@@ -228,6 +228,7 @@ body {
 }
 
 #service {
+  padding-top: 70px ;
   background: linear-gradient(-40deg, #142B39, #060D13);
   padding-bottom: 300px;
   /* Adicionar mais espaço no final da seção */
@@ -241,24 +242,29 @@ body {
 }
 
 .services-content {
-  height: 100vh;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: space-around; /* Distribute items evenly along the main axis */
+  align-items: stretch; /* Stretch items to fill the container height */
   flex-wrap: wrap;
   gap: 2rem;
   margin: 0px 30px;
-
 }
 
-.services-content .services-box {
-  flex: 1 1 30rem;
+.services-box {
+  width: calc(33.33% - 2rem); /* Calculate width for three items with gap between them */
   background-color: #143d57;
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
   text-align: center;
   border: .1rem solid #00000057;
   transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-box .btn-more {
+  justify-content: center;
+  margin-top: auto; /* Alinhar o botão ao final do card */
 }
 
 .services-content .services-box:hover {
@@ -275,7 +281,10 @@ body {
   font-size: 7rem;
   color: rgb(133, 160, 242, 95);
 }
-
+.services-box h3,
+.services-box p {
+  flex: 1; /* Distribuir o espaço igualmente entre o título e o parágrafo */
+}
 .services-box h3 {
   font-size: 2.4rem;
 }
@@ -301,8 +310,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* Para que os projetos sejam empilhados verticalmente */
   gap: 3rem;
-  margin: 30px;
+  margin: 30px auto; /* Centralizar e ajustar a margem */
+  max-width: 1200px; /* Definir uma largura máxima */
 }
 
 .projects-box {
@@ -310,12 +321,22 @@ body {
   justify-content: center;
   margin-bottom: 1rem;
   background-color: #143d57;
+  width: calc(50% - 3rem); /* Largura de 50% menos a lacuna para comportar 2 projetos por linha */
+  max-width: 280px; /* Largura máxima dos projetos */
+  height: 100px; /* Altura dos projetos */
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem #142B39;
+  overflow: hidden;
+  display: flex;
 }
 
 .projects-box img {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço */
   transition: .5s ease;
 }
+
 
 .projects-box:hover img {
   width: 100%;
@@ -333,21 +354,22 @@ body {
 }
 
 
-.projects-box .project-layer {
+.project-layer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.377), rgb(133, 160, 242, 95));
+  height: auto; /* Definir altura automática para se ajustar ao conteúdo */
+  background: linear-gradient(rgba(0, 0, 0, 0.377), rgba(133, 160, 242, 0.95));
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 4rem;
+  padding: 0 1.5rem; /* Reduzir o padding para melhor ajuste */
   transform: translateY(100%);
   transition: .5s ease;
 }
+
 
 .projects-box:hover .project-layer {
   transform: translateY(0);
@@ -467,9 +489,3 @@ button:hover {
   /* Espaçamento no topo */
 }
 
-
-.projects-box .imagepy{
-  position: relative;
-  background-size:contain;
-  height: 100vh;
-}
