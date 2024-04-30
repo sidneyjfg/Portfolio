@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  background: #142B39;
-  color: #fff;
+    background: #142B39;
+    color: #fff;
 }
 
 .header {
@@ -21,6 +21,7 @@ body {
   left: 0;
   width: 100%;
   padding: 20px 10%;
+  
   background: linear-gradient(rgba(0, 0, 0, 0.938), transparent);
   display: flex;
   justify-content: space-between;
