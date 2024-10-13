@@ -77,7 +77,7 @@
       "description": "Este projeto se conecta à API do HUB PluggTo e realiza validações com o ERP para garantir a integração bem-sucedida de pedidos."
     },
     "2": {
-      "title": "Sistema Completo de Monitoramento",
+      "title": "Automação Monitoramento Fulfillment",
       "description": "Utilizando Python, este projeto converte planilhas em arquivos CSV, transfere-os via SCP e executa uma shell predefinida no sistema do cliente para validação manual de dados."
     },
     "3": {
