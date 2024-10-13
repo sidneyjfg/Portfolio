@@ -1,0 +1,95 @@
+/* Navbar Styling */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: linear-gradient(rgba(0, 0, 0, 0.938),transparent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav-bar .logo img {
+  width: 50px;
+  height: auto;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  /* Espaçamento entre os links */
+}
+
+.nav-bar ul li a {
+  color: #15AAFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  color: #fff;
+}
+
+/* Animation for route transitions */
+.fade-slide-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-slide-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-slide-exit {
+  opacity: 1;
+}
+
+.fade-slide-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilos para o contêiner dos botões de idioma */
+.language-switch {
+  display: flex;
+  gap: 10px; /* Espaço entre os botões */
+  align-items: center;
+  justify-content: flex-end; /* Alinha os botões à direita */
+  margin-right: 20px; /* Espaço entre a barra de navegação e os botões */
+}
+
+/* Estilos para os botões de idioma */
+.lang-btn {
+  background-color: transparent; /* Botão transparente para deixar mais sutil */
+  color: #15AAFF; /* Cor do texto azul clara */
+  border: 1px solid #15AAFF; /* Borda fina e discreta */
+  border-radius: 20px; /* Bordas arredondadas para um estilo mais moderno */
+  padding: 8px 16px; /* Espaçamento interno ajustado */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte para um visual mais moderno */
+  cursor: pointer; /* Mostra o cursor de "pointer" ao passar o mouse */
+  transition: all 0.3s ease; /* Transição suave para as interações */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+.lang-btn:hover {
+  background-color: #15AAFF; /* Cor de fundo azul clara ao passar o mouse */
+  color: #fff; /* Texto branco */
+  box-shadow: 0px 4px 10px rgba(21, 170, 255, 0.3); /* Sombra sutil para destacar o botão */
+}
+
+/* Estilos para o botão ativo */
+.lang-btn.active {
+  background-color: #15AAFF; /* Cor de fundo para o botão ativo */
+  color: #fff; /* Texto branco no botão ativo */
+  border: none; /* Remove a borda no botão ativo */
+  box-shadow: 0px 4px 12px rgba(21, 170, 255, 0.5); /* Sombra mais pronunciada no botão ativo */
+}
+

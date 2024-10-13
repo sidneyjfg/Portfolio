@@ -1,0 +1,8 @@
+/* Footer Styling */
+footer.copy {
+    background-color: #142B39;
+    color: #15AAFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }

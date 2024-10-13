@@ -1,0 +1,109 @@
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Espaçamento entre os ícones */
+  margin-top: 50px;
+  /* Espaçamento superior para distanciar do conteúdo acima */
+}
+
+.skills-icons svg {
+  transition: transform 0.3s ease-in-out;
+  /* Animação suave */
+}
+
+.skills-icons svg:hover {
+  transform: scale(1.2);
+  /* Aumenta o ícone em 20% quando passar o mouse */
+}
+
+.tab-contents ul {
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+}
+
+/* About Section */
+#About {
+  background: linear-gradient(40deg, #060D13, #142B39);
+  padding: 50px;
+  color: #e3e3e3;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-content p {
+  font-size: 1.2rem; /* Aumenta o tamanho do texto abaixo do título "About Me" */
+  line-height: 1.6; /* Adiciona um espaçamento entre as linhas para melhor legibilidade */
+  margin-bottom: 20px; /* Adiciona um espaço abaixo do parágrafo para melhor separação visual */
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  margin-top: -10%;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgb(133, 160, 242, 95),
+    0 0 25px rgb(133, 160, 242, 95), 0 0 50px rgb(133, 160, 242, 95),
+    0 0 100px rgb(133, 160, 242, 95), 0 0 200px rgb(133, 160, 242, 95)
+}
+
+/*About - tab links*/
+.tab-titles {
+  display: flex;
+  margin: 0px 0 30px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(133, 160, 242, 95);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.tab-contents ul li span {
+  color: rgb(133, 160, 242, 95);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tab-contents {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0s ease-in-out, opacity 1.0s ease-in-out; /* Transição suave e mais lenta */
+}
+
+.tab-contents.active-tab {
+  max-height: 1100px;
+  opacity: 1;
+}
