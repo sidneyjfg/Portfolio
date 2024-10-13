@@ -1,0 +1,88 @@
+{
+  "welcome": "Welcome to my portfolio",
+  "description": "This is a showcase of my backend development projects, highlighting my technical skills and achievements.",
+  "button": "Download Resume",
+  "project_heading": "My Backend Projects",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "apiPlayground": "API Playground"
+  },
+  "footer": {
+    "copyright": "Copyright ©2024 Sidney's Portfolio"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Sidney Junio",
+    "intro": "And I'm a",
+    "role": {
+      "backend": "BackEnd Developer",
+      "frontend": "FrontEnd Developer"
+    },
+    "description": "I'm a web designer with over a year of experience, focusing on backend development. I specialize in crafting and implementing web designs and delivering robust backend solutions.",
+    "downloadButton": "Download Resume"
+  },
+  "about": {
+    "heading": "About",
+    "me": "Me",
+    "description": "I'm Sidney, a 20-year-old Systems Analysis and Development student at University Positivo (UP). I have a passion for technology and dedicate my free time to honing my skills. I'm proactive and always looking for new challenges and opportunities for professional growth. My goal is to work on innovative projects and, in the future, merge work with travel, using AI to automate my home life. I enjoy spending time with family and friends and love exploring new cultures. I'm always open to exciting new projects and opportunities.",
+    "skillsTitle": "Skills",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "skills": {
+      "app": "App Development",
+      "appDescription": "Beginner in developing Android/iOS apps using Dart.",
+      "backendFrontend": "BackEnd and FrontEnd Technologies",
+      "backendFrontendDescription": "Experienced with technologies like HTML, CSS/Bootstrap, JavaScript, React, Python, Django, C#, and JavaScript.",
+      "os": "Operating Systems",
+      "osDescription": "Development experience on both Linux and Windows platforms.",
+      "databases": "Databases",
+      "databasesDescription": "Implementing databases in applications, particularly MySQL."
+    },
+    "experience": {
+      "currentJob": {
+        "date": "May 2023 - Present",
+        "description": "Support Analyst at Nérus, responsible for managing Linux-based systems, providing technical support to clients, and working with AWS, databases, and cloud infrastructure."
+      },
+      "webDev": {
+        "date": "April 2023",
+        "description": "Developed web and app interfaces using CSS, HTML, and WordPress, focusing on user experience and responsive design."
+      },
+      "ecommerce": {
+        "date": "June 2021",
+        "description": "Developed and managed e-commerce websites with a focus on improving functionality and user interaction, ensuring a smooth shopping experience."
+      }
+    },
+    "education": {
+      "university": {
+        "date": "2022 - 2026",
+        "description": "Technologist's in Systems Analysis and Development - Universidade Positivo (UP). Currently pursuing, with a focus on software development, database management, and emerging technologies."
+      },
+      "technical": {
+        "date": "2018 - 2019",
+        "description": "Technical Certification in IT - SENAI. Hands-on training in hardware, software, and network infrastructure."
+      },
+      "english": {
+        "date": "2015 - 2016",
+        "description": "English Language Course - FISK. Intermediate proficiency in reading, writing, and speaking."
+      }
+    }
+  },
+  "projects": {
+    "heading": "My Backend Projects",
+    "1": {
+      "title": "Automatic Monitoring with PluggTo",
+      "description": "This project connects to the PluggTo HUB API and performs validations with the ERP to ensure order integration is successful."
+    },
+    "2": {
+      "title": "Full Monitoring System",
+      "description": "Using Python, this project converts spreadsheets into CSV files, transfers them via SCP, and executes a predefined shell on the client's system for manual data validation."
+    },
+    "3": {
+      "title": "Account Splitting System",
+      "description": "A system that simplifies bill splitting between customers by automatically calculating each person's share and generating payments if requested."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "welcome": "Bem-vindo ao meu portfólio",
+  "description": "Aqui você encontrará uma coleção dos meus projetos de backend, destacando minhas habilidades e experiências.",
+  "button": "Baixar Currículo",
+  "project_heading": "Projetos de Backend",
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "projects": "Projetos",
+    "apiPlayground": "Área de Testes API"
+  },
+  "footer": {
+    "copyright": "Direitos Autorais ©2024 Portfólio de Sidney"
+  },
+  "home": {
+    "greeting": "Olá, sou",
+    "name": "Sidney Junio",
+    "intro": "Desenvolvedor especializado em",
+    "role": {
+      "backend": "Desenvolvimento BackEnd",
+      "frontend": "Desenvolvimento FrontEnd"
+    },
+    "description": "Tenho um ano de experiência em web design, com foco no desenvolvimento BackEnd. Meu trabalho abrange desde o design de interfaces até a implementação técnica de soluções robustas.",
+    "downloadButton": "Baixar Currículo"
+  },
+  "about": {
+    "heading": "Sobre",
+    "me": "Mim",
+    "description": "Sou Sidney, tenho 20 anos, estudante de Análise e Desenvolvimento de Sistemas na Universidade Positivo (UP). A tecnologia sempre foi minha paixão, e dedico meu tempo livre a aprimorar minhas habilidades. Proativo e sempre em busca de novos desafios, estou focado em crescer profissionalmente. Meu objetivo é participar de projetos inovadores e, no futuro, unir trabalho e viagens, automatizando minha vida com o poder da inteligência artificial. Gosto de estar entre amigos e familiares, além de explorar novas culturas. Estou sempre aberto a novos projetos e oportunidades.",
+    "skillsTitle": "Competências",
+    "experienceTitle": "Experiência",
+    "educationTitle": "Formação",
+    "skills": {
+      "app": "Desenvolvimento de Aplicativos",
+      "appDescription": "Iniciando no desenvolvimento de apps para Android e iOS utilizando Dart.",
+      "backendFrontend": "Tecnologias FrontEnd e BackEnd",
+      "backendFrontendDescription": "Experiência em HTML, CSS/Bootstrap, Javascript, React, Python, Django, C# e JavaScript.",
+      "os": "Sistemas Operacionais",
+      "osDescription": "Desenvolvimento para Linux e Windows.",
+      "databases": "Bancos de Dados",
+      "databasesDescription": "Implementação de bancos de dados como MySQL."
+    },
+    "experience": {
+      "currentJob": {
+        "date": "Maio 2023 - Atual",
+        "description": "Analista de Suporte na Nérus. Responsável por suporte técnico utilizando sistemas Linux, fornecendo soluções para clientes internos e externos e gerenciando serviços em nuvem com AWS."
+      },
+      "webDev": {
+        "date": "Abril 2023",
+        "description": "Projeto freelance: Criação e desenvolvimento de interfaces web e app utilizando CSS, HTML e WordPress para pequenas empresas."
+      },
+      "ecommerce": {
+        "date": "Junho 2021",
+        "description": "Desenvolvimento de sites de e-commerce, com foco em melhorar a experiência do usuário e implementar novas funcionalidades com PHP."
+      }
+    },
+    "education": {
+      "university": {
+        "date": "2022 - 2026",
+        "description": "Tecnologo em Análise e Desenvolvimento - Universidade Positivo (UP)."
+      },
+      "technical": {
+        "date": "2018 - 2019",
+        "description": "Técnico em Informática - SENAI. Curso técnico de um ano com foco em hardware, software e suporte de TI."
+      },
+      "english": {
+        "date": "2015 - 2016",
+        "description": "Curso de Inglês - FISK. Nível intermediário em inglês falado e escrito."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Meus Projetos de Backend",
+    "1": {
+      "title": "Monitoramento Automático PluggTo",
+      "description": "Este projeto se conecta à API do HUB PluggTo e realiza validações com o ERP para garantir a integração bem-sucedida de pedidos."
+    },
+    "2": {
+      "title": "Sistema Completo de Monitoramento",
+      "description": "Utilizando Python, este projeto converte planilhas em arquivos CSV, transfere-os via SCP e executa uma shell predefinida no sistema do cliente para validação manual de dados."
+    },
+    "3": {
+      "title": "Sistema de Divisão de Contas",
+      "description": "Sistema que facilita a divisão de contas entre clientes, calculando automaticamente a parte de cada um e gerando pagamentos, se necessário."
+    }
+  }
+}

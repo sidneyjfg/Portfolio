@@ -1,13 +1,163 @@
-body {
+/*
+#15AAFF - Azul
+#373636 - Preto
+#F8F7F3 - Branco
+*/
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open-Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body, #root{
+  scroll-behavior: smooth;
+  height: 100%;
+  color: #F8F7F3;
+  background: linear-gradient(-40deg, #142B39, #060D13);
+}
+
+.logo img {
+  border-radius: 10px;
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+}
+
+.nav-bar a{
+  color: inherit; /* Or set your desired color */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.nav-bar a:hover{
+  color: #15AAFF;
+}
+
+.nav-bar .active {
+  /* Estilo para links ativos */
+  background-color: #797D89;
+  color: #15AAFF;
+  border: 1px solid #797D89;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.heading span {
+  align-items: center;
+  color: rgb(133, 160, 242, 95);
+}
+
+
+.btn-more {
+  display: inline-flex;
+  padding: 12px 28px;
+  background: rgb(133, 160, 242, 95);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-more i {
+  font-size: 1.5rem;
+}
+
+.btn-more:hover {
+  box-shadow: 0 0 5px rgb(133, 160, 242, 95),
+    0 0 25px rgb(133, 160, 242, 95), 0 0 50px rgb(133, 160, 242, 95),
+    0 0 100px rgb(133, 160, 242, 95), 0 0 200px rgb(133, 160, 242, 95)
+}
+
+
+
+
+.about-col-2 {
+  flex-basis: 60%;
+}
+
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .projects-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .projects-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.cep {
+  padding: 30px;
+}
+
+.cep-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.cep-cover button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #143d57;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cep-cover button:hover {
+  background-color: #000;
+}
+
+#cepInput {
+  box-shadow: 0 0 20px rgb(133, 160, 242, 95);
+}
+
+#cepInput,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(133, 160, 242, 95);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button {
+  background-color: #142B39;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #143d57;
+}
+
+#resultadoCep {
+  background: #142B39;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgb(133, 160, 242, 95);
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
