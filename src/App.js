@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation, useNavigate } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll'; // Importando react-scroll para navegação suave
 import { useEffect, useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group'; // Importando para transições
+import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
 import Logo from './img/sjTransparent.png';
 import Home from './components/Home.js';
 import About from './components/About.js';
@@ -11,8 +10,11 @@ import APIPlayground from './components/APIPlayground';
 import './App.css';
 
 function App() {
+  const isProduction = process.env.NODE_ENV === 'production';
+  const basename = isProduction ? '/Portfolio' : '/';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <RoutesWithScroll />
     </Router>
   );
@@ -21,7 +23,7 @@ function App() {
 function RoutesWithScroll() {
   const { t, i18n } = useTranslation();
   const location = useLocation();
-  const navigate = useNavigate(); // Para redirecionar
+  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('home');
 
   // Função para detectar a seção ativa com base na rolagem
@@ -32,23 +34,27 @@ function RoutesWithScroll() {
       return el ? el.getBoundingClientRect().top : null;
     });
 
-    if (window.scrollY === 0) {
-      setActiveSection('home');
-      return;
-    }
-
-    const index = offsets.findIndex(offset => offset > 0 && offset < window.innerHeight / 2);
+    const index = offsets.findIndex(offset => offset && offset < window.innerHeight / 2 && offset > 0);
 
     if (index !== -1) {
-      setActiveSection(sections[index].toLowerCase());
+      const currentSection = sections[index].toLowerCase();
+      if (currentSection !== activeSection) {
+        setActiveSection(currentSection);
+      }
+    } else if (window.scrollY === 0) {
+      if (activeSection !== 'home') {
+        setActiveSection('home');
+      }
     }
   };
 
   // Adiciona o listener de rolagem
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (location.pathname === "/") {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [location, activeSection]);
 
   // Função para mudar o idioma
   const changeLanguage = (lng) => {
@@ -68,6 +74,13 @@ function RoutesWithScroll() {
   const handleSectionClick = (section) => {
     if (location.pathname !== "/") {
       navigate("/"); // Redireciona para Home se não estiver na rota principal
+      // Delay para garantir que a navegação aconteça antes do scroll
+      setTimeout(() => {
+        document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    } else {
+      // Se já estiver na rota "/", apenas faça o scroll suave
+      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
     }
     setActiveSection(section); // Define a seção ativa
   };
@@ -82,7 +95,7 @@ function RoutesWithScroll() {
           <nav>
             <ul>
               <li>
-                {/* Usando Link para garantir a navegação entre páginas */}
+                {/* Usando Link para navegar, mas sem recarregar */}
                 <Link
                   to="/"
                   onClick={scrollToTop} // Função para voltar ao topo e setar Home como ativo
@@ -92,26 +105,30 @@ function RoutesWithScroll() {
                 </Link>
               </li>
               <li>
-                <ScrollLink
-                  to="About"
-                  smooth={true}
-                  duration={500}
+                {/* Scroll suave para About */}
+                <a
+                  href="#About" // Apenas mudamos o href para manter a URL com o hash
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSectionClick('About'); // Rola suavemente para a seção "About"
+                  }}
                   className={activeSection === 'about' ? 'active-link' : ''}
-                  onClick={() => handleSectionClick('about')}
                 >
                   {t('nav.about')}
-                </ScrollLink>
+                </a>
               </li>
               <li>
-                <ScrollLink
-                  to="Projects"
-                  smooth={true}
-                  duration={500}
+                {/* Scroll suave para Projects */}
+                <a
+                  href="#Projects"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSectionClick('Projects');
+                  }}
                   className={activeSection === 'projects' ? 'active-link' : ''}
-                  onClick={() => handleSectionClick('projects')}
                 >
                   {t('nav.projects')}
-                </ScrollLink>
+                </a>
               </li>
               <li>
                 <Link

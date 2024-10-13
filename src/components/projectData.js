@@ -1,5 +1,5 @@
 import { FaNodeJs, FaReact, FaPython } from 'react-icons/fa';
-import { SiMysql, SiTypescript, SiExpress, SiDocker } from 'react-icons/si';
+import { SiMysql, SiTypescript, SiExpress, SiDocker, SiLinux } from 'react-icons/si';
 
 const projectData = [
   {
@@ -14,7 +14,9 @@ const projectData = [
     id: 2,
     technologies: [
       { name: 'Python', icon: <FaPython color="#3776AB" /> },
-      { name: 'Shell', icon: <SiDocker color="#2496ED" /> } // Pode mudar esse ícone se quiser algo mais específico
+      { name: 'Shell', icon: <SiDocker color="#2496ED" /> },
+      { name: 'Linux', icon: <SiLinux color="#FCC624" /> }
+       // Pode mudar esse ícone se quiser algo mais específico
     ]
   },
   {
