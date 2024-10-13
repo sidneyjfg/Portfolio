@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.d53bf748.css",
+    "main.css": "/Portfolio/static/css/main.0c9a3a72.css",
     "main.js": "/Portfolio/static/js/main.68f2f0aa.js",
     "static/media/background.png": "/Portfolio/static/media/background.ed1cf11a37be98e4b686.png",
     "static/media/Sidney.jpg": "/Portfolio/static/media/Sidney.34992012dc2f6857d216.jpg",
     "static/media/curriculumSidney.pdf": "/Portfolio/static/media/curriculumSidney.b615ddd44762c008ccba.pdf",
     "static/media/sjTransparent.png": "/Portfolio/static/media/sjTransparent.fb7c0a7369b76cdf92ef.png",
     "index.html": "/Portfolio/index.html",
-    "main.d53bf748.css.map": "/Portfolio/static/css/main.d53bf748.css.map",
+    "main.0c9a3a72.css.map": "/Portfolio/static/css/main.0c9a3a72.css.map",
     "main.68f2f0aa.js.map": "/Portfolio/static/js/main.68f2f0aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.d53bf748.css",
+    "static/css/main.0c9a3a72.css",
     "static/js/main.68f2f0aa.js"
   ]
 }
