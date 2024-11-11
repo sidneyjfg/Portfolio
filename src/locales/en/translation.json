@@ -72,17 +72,23 @@
   },
   "projects": {
     "heading": "My Backend Projects",
+    "githubButton": "View on GitHub",
     "1": {
-      "title": "Automatic Monitoring with PluggTo",
-      "description": "This project connects to the PluggTo HUB API and performs validations with the ERP to ensure order integration is successful."
+      "title": "Automatic Monitoring with PluggTo (Private)",
+      "description": "This project connects to the PluggTo HUB API and performs validations with the ERP to ensure successful order integration."
     },
     "2": {
-      "title": "Automation Fulfillment Monitoring",
-      "description": "Using Python, this project converts spreadsheets into CSV files, transfers them via SCP, and executes a predefined shell on the client's system for manual data validation."
+      "title": "Automation Fulfillment Monitoring (Private)",
+      "description": "Project to monitor the import of fulfillment invoices in the ERP system via API with MercadoLivre and generate notifications on Google Chat about invoice integration status in specified periods, using crons."
     },
     "3": {
-      "title": "Account Splitting System",
-      "description": "A system that simplifies bill splitting between customers by automatically calculating each person's share and generating payments if requested."
+      "title": "POS and Inventory Control System",
+      "description": "Simulates a point of sale for small entrepreneurs with inventory control, manual stock movements, product, client, and supplier registration, as well as entry and exit invoices and customized reports. Not yet integrated with SEFAZ for homologation."
+    },
+    "4": {
+      "title": "Scheduler Manager",
+      "description": "An application to schedule clients with notifications via WhatsApp, email, and SMS, keeping track of times and services while optimizing daily appointments."
     }
   }
+
 }

@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import './Home.css';
 import Typed from 'typed.js'; // Import Typed.js
 import { useTranslation } from 'react-i18next';
-import curriculum from '../doc/curriculumSidney.pdf';
+import curriculumEn from '../doc/CurriculumSidney.pdf';
+import curriculumPt from '../doc/CurriculoSidney.pdf';
 
 function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const typed = new Typed('#element', {
@@ -16,6 +17,9 @@ function Home() {
 
     return () => typed.destroy();
   }, [t]); // Dependendo do hook para detectar mudanças de idioma
+
+  // Define o link do currículo com base no idioma
+  const curriculumLink = i18n.language === 'en' ? curriculumEn : curriculumPt;
 
   return (
     <div className='Home' id="Home">
@@ -30,7 +34,7 @@ function Home() {
           <a href='https://github.com/sidneyjfg'><i className='bx bxl-github'></i></a>
           <a href='https://www.linkedin.com/in/sidneyjunio/'><i className='bx bxl-linkedin'></i></a>
         </div>
-        <a href={curriculum} target='_blank' rel="noreferrer" className='btn-more'>
+        <a href={curriculumLink} target='_blank' rel="noreferrer" className='btn-more'>
           <i className='bx bx-download'></i> {t('home.downloadButton')}
         </a>
       </div>

@@ -72,17 +72,22 @@
   },
   "projects": {
     "heading": "Meus Projetos de Backend",
+    "githubButton": "Ver no Github",
     "1": {
-      "title": "Monitoramento Automático PluggTo",
+      "title": "Monitoramento Automático PluggTo (Privado)",
       "description": "Este projeto se conecta à API do HUB PluggTo e realiza validações com o ERP para garantir a integração bem-sucedida de pedidos."
     },
     "2": {
-      "title": "Automação Monitoramento Fulfillment",
-      "description": "Utilizando Python, este projeto converte planilhas em arquivos CSV, transfere-os via SCP e executa uma shell predefinida no sistema do cliente para validação manual de dados."
+      "title": "Automação Monitoramento Fulfillment (Privado)",
+      "description": "Projeto para monitorar a importação de notas fulfillment no sistema ERP via API com o MercadoLivre e gerar notificações no Google Chat sobre o status de integração de notas em períodos determinados, utilizando crons."
     },
     "3": {
-      "title": "Sistema de Divisão de Contas",
-      "description": "Sistema que facilita a divisão de contas entre clientes, calculando automaticamente a parte de cada um e gerando pagamentos, se necessário."
+      "title": "Sistema de PDV e Controle de Estoque",
+      "description": "Simula um ponto de venda para pequenos empreendedores com controle de estoque, movimentação manual, cadastro de produtos, clientes e fornecedores, além de notas fiscais de entrada e saída e relatórios personalizados. Ainda sem integração com SEFAZ de homologação."
+    },
+    "4": {
+      "title": "Gerenciador de Agenda",
+      "description": "Aplicativo para agendar clientes com notificações via WhatsApp, email e SMS, mantendo um controle de horários e serviços, e otimizando o atendimento diário."
     }
   }
 }

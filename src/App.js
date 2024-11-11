@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group'; 
 import Logo from './img/sjTransparent.png';
 import Home from './components/Home.js';
@@ -27,15 +27,15 @@ function RoutesWithScroll() {
   const [activeSection, setActiveSection] = useState('home');
 
   // Função para detectar a seção ativa com base na rolagem
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const sections = ['Home', 'About', 'Projects'];
     const offsets = sections.map(section => {
       const el = document.getElementById(section);
       return el ? el.getBoundingClientRect().top : null;
     });
-
+  
     const index = offsets.findIndex(offset => offset && offset < window.innerHeight / 2 && offset > 0);
-
+  
     if (index !== -1) {
       const currentSection = sections[index].toLowerCase();
       if (currentSection !== activeSection) {
@@ -46,7 +46,14 @@ function RoutesWithScroll() {
         setActiveSection('home');
       }
     }
-  };
+  }, [activeSection]);
+  
+  useEffect(() => {
+    if (location.pathname === "/") {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [location, handleScroll]);
 
   // Adiciona o listener de rolagem
   useEffect(() => {
@@ -54,7 +61,7 @@ function RoutesWithScroll() {
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     }
-  }, [location, activeSection]);
+  }, [location, activeSection, handleScroll]);
 
   // Função para mudar o idioma
   const changeLanguage = (lng) => {

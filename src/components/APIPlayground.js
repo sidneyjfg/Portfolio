@@ -5,7 +5,7 @@ function APIPlayground() {
   const [url, setUrl] = useState('');
   const [method, setMethod] = useState('GET');
   const [params, setParams] = useState('');
-  const [response, setResponse] = useState(null);
+  const [response] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();

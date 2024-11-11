@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
-import '../style/Header.css';
+
 
 const Header = () => {
   const { t } = useTranslation();

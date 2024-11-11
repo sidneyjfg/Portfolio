@@ -21,6 +21,15 @@ function Projects() {
                 </div>
               ))}
             </div>
+            {/* Botão para GitHub */}
+            <a 
+              href={project.githubLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="github-button"
+            >
+              {t('projects.githubButton')} {/* Chave geral para todos os projetos */}
+            </a>
           </div>
         ))}
       </div>
