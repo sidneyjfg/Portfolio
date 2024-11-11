@@ -1,0 +1,47 @@
+.api-playground {
+  padding: 20px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.api-playground h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.api-playground form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.api-playground label {
+  margin: 10px 0;
+}
+
+.api-playground input, .api-playground select {
+  padding: 8px;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.api-playground button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 200px;
+  border-radius: 5%;
+}
+
+.api-playground button:hover {
+  background-color: #0056b3;
+}
+
+.response {
+  margin-top: 20px;
+  text-align: left;
+}
