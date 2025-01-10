@@ -1,47 +1,57 @@
 .api-playground {
+  margin-top: 80px;
   padding: 20px;
   text-align: center;
-  margin-top: 5%;
 }
 
-.api-playground h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.api-playground form {
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.api-playground label {
-  margin: 10px 0;
-}
-
-.api-playground input, .api-playground select {
-  padding: 8px;
-  font-size: 1rem;
-  margin: 5px;
-}
-
-.api-playground button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  width: 200px;
-  border-radius: 5%;
-}
-
-.api-playground button:hover {
-  background-color: #0056b3;
-}
-
-.response {
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
   margin-top: 20px;
+}
+
+.card {
+  background: #ffffff; /* Branco para contraste melhor */
+  color: #1f2937; /* Cinza escuro */
+  padding: 20px;
+  border: 1px solid #e5e7eb; /* Cinza claro para bordas */
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #1f2937; /* Cinza escuro */
+}
+
+.card p {
+  color: #6b7280; /* Cinza médio */
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Eleva o card suavemente */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  background: #f3f4f6; /* Fundo cinza claro */
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb; /* Azul vibrante */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #1d4ed8; /* Azul mais escuro */
 }

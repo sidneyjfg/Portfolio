@@ -86,8 +86,22 @@
       "description": "Simula um ponto de venda para pequenos empreendedores com controle de estoque, movimentação manual, cadastro de produtos, clientes e fornecedores, além de notas fiscais de entrada e saída e relatórios personalizados. Ainda sem integração com SEFAZ de homologação."
     },
     "4": {
-      "title": "Gerenciador de Agenda",
-      "description": "Aplicativo para agendar clientes com notificações via WhatsApp, email e SMS, mantendo um controle de horários e serviços, e otimizando o atendimento diário."
+      "title": "Gerenciador de Finanças",
+      "description": "Aplicativo desenvolvido para facilitar o controle financeiro pessoal ou empresarial. Permite a importação de transações bancárias diretamente no sistema, organizando receitas e despesas em categorias personalizáveis. Oferece uma visão clara dos gastos, relatórios detalhados e gráficos interativos para análise financeira, ajudando os usuários a tomar decisões informadas e gerenciar seu orçamento de maneira eficaz."
+    }
+  },
+  "apiPlayground": {
+    "title": "Área de Testes API",
+    "description": "Selecione uma ferramenta para explorar sua funcionalidade",
+    "tools": {
+      "jsonConverter": {
+        "title": "Conversor de JSON",
+        "description": "Converta e formate JSON facilmente."
+      },
+      "apiTester": {
+        "title": "Testador de API",
+        "description": "Teste APIs com requisições personalizadas."
+      }
     }
   }
 }

@@ -7,6 +7,7 @@ import Home from './components/Home.js';
 import About from './components/About.js';
 import Project from './components/Project.js';
 import APIPlayground from './components/APIPlayground';
+import JSONConverter from './components/JSONConverter'; // Importa o JSON Converter
 import './App.css';
 
 function App() {
@@ -26,7 +27,6 @@ function RoutesWithScroll() {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('home');
 
-  // Função para detectar a seção ativa com base na rolagem
   const handleScroll = useCallback(() => {
     const sections = ['Home', 'About', 'Projects'];
     const offsets = sections.map(section => {
@@ -55,41 +55,29 @@ function RoutesWithScroll() {
     }
   }, [location, handleScroll]);
 
-  // Adiciona o listener de rolagem
-  useEffect(() => {
-    if (location.pathname === "/") {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-  }, [location, activeSection, handleScroll]);
-
-  // Função para mudar o idioma
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
 
-  // Função para ir para o topo da página e definir a seção Home
   const scrollToTop = () => {
     if (location.pathname !== "/") {
-      navigate("/"); // Se estiver fora da página principal, redireciona para Home
+      navigate("/");
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' }); // Se já estiver na home, apenas rola suavemente para o topo
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    setActiveSection('home'); // Define a seção ativa como Home
+    setActiveSection('home');
   };
 
   const handleSectionClick = (section) => {
     if (location.pathname !== "/") {
-      navigate("/"); // Redireciona para Home se não estiver na rota principal
-      // Delay para garantir que a navegação aconteça antes do scroll
+      navigate("/");
       setTimeout(() => {
         document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
       }, 300);
     } else {
-      // Se já estiver na rota "/", apenas faça o scroll suave
       document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
     }
-    setActiveSection(section); // Define a seção ativa
+    setActiveSection(section);
   };
 
   return (
@@ -102,22 +90,20 @@ function RoutesWithScroll() {
           <nav>
             <ul>
               <li>
-                {/* Usando Link para navegar, mas sem recarregar */}
                 <Link
                   to="/"
-                  onClick={scrollToTop} // Função para voltar ao topo e setar Home como ativo
+                  onClick={scrollToTop}
                   className={activeSection === 'home' ? 'active-link' : ''}
                 >
                   {t('nav.home')}
                 </Link>
               </li>
               <li>
-                {/* Scroll suave para About */}
                 <a
-                  href="#About" // Apenas mudamos o href para manter a URL com o hash
+                  href="#About"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleSectionClick('About'); // Rola suavemente para a seção "About"
+                    handleSectionClick('About');
                   }}
                   className={activeSection === 'about' ? 'active-link' : ''}
                 >
@@ -125,7 +111,6 @@ function RoutesWithScroll() {
                 </a>
               </li>
               <li>
-                {/* Scroll suave para Projects */}
                 <a
                   href="#Projects"
                   onClick={(e) => {
@@ -169,8 +154,8 @@ function RoutesWithScroll() {
         <TransitionGroup>
           <CSSTransition
             key={location.key}
-            timeout={500} // Tempo da transição (500ms)
-            classNames="fade" // Nome da classe para animação
+            timeout={500}
+            classNames="fade"
           >
             <Routes>
               <Route path="/" element={(
@@ -187,6 +172,8 @@ function RoutesWithScroll() {
                 </>
               )} />
               <Route path="/api-playground" element={<APIPlayground />} />
+              {/* Rota para JSON Converter */}
+              <Route path="/json-converter" element={<JSONConverter />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>

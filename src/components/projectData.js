@@ -35,6 +35,7 @@ const projectData = [
   },
   {
     id: 4,
+    githubLink: "https://github.com/sidneyjfg/saas-financas-web",
     technologies: [
       { name: 'React', icon: <FaReact color="#61DAFB" /> },
       { name: 'Node.js', icon: <FaNodeJs color="#339933" /> },

@@ -86,9 +86,22 @@
       "description": "Simulates a point of sale for small entrepreneurs with inventory control, manual stock movements, product, client, and supplier registration, as well as entry and exit invoices and customized reports. Not yet integrated with SEFAZ for homologation."
     },
     "4": {
-      "title": "Scheduler Manager",
-      "description": "An application to schedule clients with notifications via WhatsApp, email, and SMS, keeping track of times and services while optimizing daily appointments."
+      "title": "Finance Manager",
+      "description": "An application designed to simplify personal or business financial management. It enables importing bank transactions directly into the system, organizing income and expenses into customizable categories. The app provides a clear overview of expenditures, detailed reports, and interactive charts for financial analysis, empowering users to make informed decisions and effectively manage their budgets."
+    }
+  },
+  "apiPlayground": {
+    "title": "API Playground",
+    "description": "Select a tool to explore its functionality",
+    "tools": {
+      "jsonConverter": {
+        "title": "JSON Converter",
+        "description": "Easily convert and format JSON."
+      },
+      "apiTester": {
+        "title": "API Tester",
+        "description": "Test APIs with custom requests."
+      }
     }
   }
-
 }
