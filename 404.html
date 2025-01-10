@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <script>
-      // Redirecionar para o index.html, mas manter o caminho da URL
-      window.location.replace(
-        window.location.origin + window.location.pathname + "/index.html"
-      );
+      // Redirecionar para o index.html sem criar loop infinito
+      if (!window.location.pathname.endsWith("index.html")) {
+        window.location.replace(
+          window.location.origin + "/Portfolio" + "/index.html"
+        );
+      }
     </script>
   </head>
   <body>
