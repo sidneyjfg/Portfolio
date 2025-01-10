@@ -49,6 +49,16 @@ function RoutesWithScroll() {
   }, [activeSection]);
   
   useEffect(() => {
+    // Verificar se há uma query string "path"
+    const queryParams = new URLSearchParams(window.location.search);
+    const path = queryParams.get('path');
+    if (path) {
+      // Navegar para a rota especificada na query string
+      navigate(path, { replace: true });
+    }
+  }, [navigate]);
+  
+  useEffect(() => {
     if (location.pathname === "/") {
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
@@ -174,7 +184,7 @@ function RoutesWithScroll() {
               <Route path="/api-playground" element={<APIPlayground />} />
               {/* Rota para JSON Converter */}
               <Route path="/json-converter" element={<JSONConverter />} />
-            </Routes>
+              </Routes>
           </CSSTransition>
         </TransitionGroup>
       </main>

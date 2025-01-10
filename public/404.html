@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+      // Extrair a rota original
+      const originalPath = window.location.pathname.replace('/Portfolio', '');
+      // Redirecionar para a página principal com a rota como query string
+      const redirectUrl = `${window.location.origin}/Portfolio/?path=${originalPath}`;
+      window.location.replace(redirectUrl);
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
