@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.4fe98edf.css",
-    "main.js": "/Portfolio/static/js/main.42f7bb5d.js",
+    "main.css": "/Portfolio/static/css/main.03db040d.css",
+    "main.js": "/Portfolio/static/js/main.88aebd13.js",
     "static/media/background.png": "/Portfolio/static/media/background.ed1cf11a37be98e4b686.png",
     "static/media/Sidney.jpg": "/Portfolio/static/media/Sidney.34992012dc2f6857d216.jpg",
     "static/media/CurriculoSidney.pdf": "/Portfolio/static/media/CurriculoSidney.e6faf767f21070873cb0.pdf",
     "static/media/CurriculumSidney.pdf": "/Portfolio/static/media/CurriculumSidney.56f0cbc75118c1665cad.pdf",
     "static/media/sjTransparent.png": "/Portfolio/static/media/sjTransparent.fb7c0a7369b76cdf92ef.png",
     "index.html": "/Portfolio/index.html",
-    "main.4fe98edf.css.map": "/Portfolio/static/css/main.4fe98edf.css.map",
-    "main.42f7bb5d.js.map": "/Portfolio/static/js/main.42f7bb5d.js.map"
+    "main.03db040d.css.map": "/Portfolio/static/css/main.03db040d.css.map",
+    "main.88aebd13.js.map": "/Portfolio/static/js/main.88aebd13.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fe98edf.css",
-    "static/js/main.42f7bb5d.js"
+    "static/css/main.03db040d.css",
+    "static/js/main.88aebd13.js"
   ]
 }
