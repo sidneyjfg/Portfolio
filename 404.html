@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <title>Redirecting...</title>
     <script>
-      // Redirecionar para o index.html sem criar loop infinito
-      if (!window.location.pathname.endsWith("index.html")) {
-        window.location.replace(
-          window.location.origin + "/Portfolio" + "/index.html"
-        );
-      }
+      // Extrair a rota original
+      const originalPath = window.location.pathname.replace('/Portfolio', '');
+      // Redirecionar para a página principal com a rota como query string
+      const redirectUrl = `${window.location.origin}/Portfolio/?path=${originalPath}`;
+      window.location.replace(redirectUrl);
     </script>
   </head>
   <body>
