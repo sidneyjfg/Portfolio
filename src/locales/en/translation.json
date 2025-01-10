@@ -103,5 +103,14 @@
         "description": "Test APIs with custom requests."
       }
     }
+  },
+  "JSONConverter": {
+    "title": {
+      "jsonConverter": "XML to JSON Converter"
+    },
+    "buttons": {
+      "convert": "Convert to JSON",
+      "clear": "Clear All"
+    }
   }
 }

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { FiCopy } from "react-icons/fi"; // Ícone de copiar
 
 function JSONConverter() {
+  const { t } = useTranslation(); // Hook para tradução
   const [xmlFiles, setXmlFiles] = useState([]); // Lista de arquivos XML selecionados
   const [outputs, setOutputs] = useState([]); // Resultados JSON formatados
   const [errors, setErrors] = useState([]); // Mensagens de erro para cada arquivo
+  const [notification, setNotification] = useState(""); // Notificação de cópia
 
   // Função para processar o XML
   const handleFileUpload = (event) => {
@@ -59,6 +63,26 @@ function JSONConverter() {
     document.querySelector("input[type='file']").value = ""; // Limpa o input de arquivos
   };
 
+  // Função para copiar JSON para a área de transferência
+  const copyToClipboard = (jsonContent) => {
+    navigator.clipboard
+      .writeText(JSON.stringify(jsonContent, null, 2))
+      .then(() => {
+        showNotification("JSON copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy JSON: ", err);
+      });
+  };
+
+  // Função para exibir a notificação
+  const showNotification = (message) => {
+    setNotification(message);
+    setTimeout(() => {
+      setNotification(""); // Remove a notificação após 3 segundos
+    }, 3000);
+  };
+
   // Função auxiliar para extrair dados do XML
   const extractData = (xmlDoc) => {
     const extractValue = (path, context = xmlDoc) => {
@@ -70,7 +94,7 @@ function JSONConverter() {
       }
       return currentNode.textContent;
     };
-  
+
     const extractAfterColon = (value) => {
       if (value && value.includes(":")) {
         const index = value.indexOf(":") + 1;
@@ -78,10 +102,9 @@ function JSONConverter() {
       }
       return value || null;
     };
-  
-    // Função para extrair todos os produtos
+
     const extractProducts = () => {
-      const productNodes = xmlDoc.querySelectorAll("det"); // Busca todos os nós <det>
+      const productNodes = xmlDoc.querySelectorAll("det");
       return Array.from(productNodes).map((productNode) => ({
         sku: extractValue("prod cProd", productNode),
         quantidade: extractValue("prod qCom", productNode),
@@ -90,8 +113,7 @@ function JSONConverter() {
         valorComissao: 0,
       }));
     };
-  
-    // Mapear os dados
+
     return {
       idPedidoHub: extractAfterColon(extractValue("det infAdProd")),
       idPedidoCanal: extractAfterColon(extractValue("det infAdProd")),
@@ -119,8 +141,7 @@ function JSONConverter() {
         ddd: "11",
         telefone: null,
         celular: "111111111",
-        email:
-          extractAfterColon(extractValue("det infAdProd")) + "@mercadolibre.com",
+        email: extractAfterColon(extractValue("det infAdProd")) + "@mercadolibre.com",
         nomeFantasia: extractValue("dest xNome"),
       },
       pagamento: {
@@ -132,44 +153,64 @@ function JSONConverter() {
         parcelas: 1,
       },
       fulfillment: 1,
-      produtos: extractProducts(), // Extrai todos os produtos
+      produtos: extractProducts(),
     };
   };
-  
 
   return (
     <div style={{ marginTop: "80px", padding: "20px", textAlign: "center" }}>
-      <h1>XML to JSON Converter</h1>
+      <h1>{t("JSONConverter.title.jsonConverter")}</h1>
       <input type="file" accept=".xml" multiple onChange={handleFileUpload} />
-      <div style={{ marginTop: "10px" }}>
+      <div style={{ marginTop: "10px", display: "flex", justifyContent: "center", gap: "10px" }}>
         <button
           onClick={convertXmlToJson}
           style={{
-            marginRight: "10px",
-            padding: "10px 20px",
+            padding: "8px 16px",
+            width: "200px",
             background: "#2563eb",
             color: "#ffffff",
             border: "none",
             borderRadius: "5px",
             cursor: "pointer",
+            fontSize: "0.9rem",
           }}
         >
-          Convert to JSON
+          {t("JSONConverter.buttons.clear")}
         </button>
         <button
           onClick={clearAll}
           style={{
-            padding: "10px 20px",
+            padding: "8px 16px",
+            width: "200px",
             background: "#d9534f",
             color: "#ffffff",
             border: "none",
             borderRadius: "5px",
             cursor: "pointer",
+            fontSize: "0.9rem",
           }}
         >
-          Clear All
+          {t("JSONConverter.buttons.clear")}
         </button>
       </div>
+
+      {notification && (
+        <div
+          style={{
+            position: "fixed",
+            top: "10px",
+            right: "10px",
+            background: "#10b981",
+            color: "#fff",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            boxShadow: "0px 4px 6px rgba(0,0,0,0.1)",
+            zIndex: 1000,
+          }}
+        >
+          {notification}
+        </div>
+      )}
       {errors.length > 0 && (
         <div style={{ color: "red", marginTop: "10px" }}>
           <strong>Errors:</strong>
@@ -184,7 +225,20 @@ function JSONConverter() {
         <div style={{ marginTop: "20px", textAlign: "left" }}>
           <h3>Output JSON:</h3>
           {outputs.map((output, index) => (
-            <div key={index}>
+            <div key={index} style={{ position: "relative", marginBottom: "20px" }}>
+              <div style={{ position: "absolute", top: "10px", right: "10px" }}>
+                <button
+                  onClick={() => copyToClipboard(output.json)}
+                  style={{
+                    marginTop: "30px",
+                    background: "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  <FiCopy size={32} color="#10b981" />
+                </button>
+              </div>
               <h4>File: {output.fileName}</h4>
               <pre
                 style={{
