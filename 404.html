@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="refresh" content="0; URL=/" />
-</head>
-<body>
-  <p>Redirecting...</p>
-</body>
+  <head>
+    <script>
+      // Redirecionar para o index.html, mas manter o caminho da URL
+      window.location.replace(
+        window.location.origin + window.location.pathname + "/index.html"
+      );
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
